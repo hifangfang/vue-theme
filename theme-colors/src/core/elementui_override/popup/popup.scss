@@ -1,0 +1,179 @@
+@mixin MixinsPopup {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 8px;
+  border-radius: var(--radius-normal);
+  background-color: #fff;
+  box-shadow:0 0 5px 2px var(--primary1), 2px 2px 5px #ddd;
+  position: relative;
+  min-width: 150px;
+  max-width: 190px;
+  // el-menu 的气泡适配
+  &.el-menu--vertical {
+    .el-menu--popup {
+      // background-color: pink;
+      margin: 0;
+      padding: 0;
+      min-width: auto;
+      box-shadow: none;
+      i:not(.el-submenu__icon-arrow) {
+        margin-right: 4px;
+      }
+      .el-submenu__icon-arrow {
+        position: absolute;
+        right: 5px;
+      }
+      // 图标修改
+      .el-icon-arrow-right{
+        font-size: 14px;
+        &:before {
+          content: "\e791";
+        }
+      }
+      // 一级菜单
+      .el-menu-item {
+        padding: 0 12px !important;
+        height: 36px;
+        line-height: 36px;
+        min-width: auto;
+        &:hover, &:focus {
+          background-color: var(--primary05);
+          border-radius: var(--radius-normal);
+          box-shadow: none;
+        }
+        &.is-active {
+          color: #ffffff;
+          background: var(--primary);
+          border-radius: var(--radius-normal);
+          box-shadow: 0px 4px 12px var(--primary4);
+          i {
+            color: var(--side-active-color);
+          }
+        }
+      }
+      // 二级菜单
+      .el-submenu {
+        color: var(--font-color-regular);
+        .el-menu--vertical {
+          margin-left: 16px;
+        }
+        &.is-active {
+          background-color: var(--primary05);
+          border-radius: var(--radius-normal);
+          box-shadow: none;
+        }
+        &:hover:not(.is-active) {
+          background-color: var(--primary05);
+          border-radius: var(--radius-normal);
+        }
+        .el-submenu__title {
+          background: transparent;
+          color: var(--font-color-regular);
+          padding: 0 12px !important;
+          height: 36px;
+          line-height: 36px;
+          // width: 152px;
+        }
+      }
+    }
+  }
+  &.el-menu--horizontal {
+    .el-menu--popup {
+      // background-color: pink;
+      margin: 0;
+      padding: 0;
+      min-width: auto;
+      box-shadow: none;
+      i:not(.el-submenu__icon-arrow) {
+        margin-right: 4px;
+      }
+      .el-submenu__icon-arrow {
+        position: absolute;
+        right: 5px;
+      }
+      // 图标修改
+      .el-icon-arrow-right{
+        font-size: 14px;
+        &:before {
+          content: "\e791";
+        }
+      }
+      // 一级菜单
+      .el-menu-item {
+        padding: 0 12px !important;
+        height: 36px;
+        line-height: 36px;
+        min-width: auto;
+        color: var(--font-color-regular);
+        background: transparent;
+        &:hover, &:focus {
+          background-color: var(--primary05);
+          border-radius: var(--radius-normal);
+          box-shadow: none;
+        }
+        &.is-active {
+          color: #ffffff;
+          background: var(--primary);
+          border-radius: var(--radius-normal);
+          box-shadow: 0px 4px 12px var(--primary4);
+          //i {
+          //  color: var(--side-active-color);
+          //}
+        }
+
+      }
+      // 二级菜单
+      .el-submenu {
+        color: var(--font-color-regular);
+        .el-menu--horizontal {
+          margin-left: 16px;
+        }
+        &.is-active {
+          background-color: var(--primary05);
+          border-radius: var(--radius-normal);
+          box-shadow: none;
+        }
+        &:hover:not(.is-active) {
+          background-color: var(--primary05);
+          border-radius: var(--radius-normal);
+        }
+        .el-submenu__title {
+          background: transparent;
+          color: var(--font-color-regular);
+          padding: 0 12px !important;
+          height: 36px;
+          line-height: 36px;
+          // width: 152px;
+        }
+      }
+    }
+  }
+}
+.zs-popup {
+  @include MixinsPopup();
+  // 三角形在左
+  &::before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: -10px;
+    border: 5px solid transparent;
+    border-right: 5px solid #fff;
+    // box-shadow:0 0 5px 2px var(--primary-plain), 2px 2px 5px #ddd;
+  }
+}
+.zs-popup-up {
+  @include MixinsPopup();
+  margin-top: 12px;
+  // 三角形在上
+  &::before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    left: 30px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+  }
+}
+

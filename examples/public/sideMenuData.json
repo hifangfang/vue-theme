@@ -1,0 +1,135 @@
+[
+    {
+        "id": "0001",
+        "icon": "el-icon-document-checked",
+        "label": "主页",
+        "option": {
+            "isframe": false,
+            "url": "/"
+        }
+    },
+    {
+        "id": "01",
+        "icon": "el-icon-reading",
+        "label": "样式预览",
+        "option": {},
+        "children": [
+            {
+                "id": "0101",
+                "icon": "el-icon-tickets",
+                "label": "文字展示",
+                "option": {
+                    "url":"/textTest"
+                }
+            },
+            {
+                "id": "0102",
+                "icon": "el-icon-coin",
+                "label": "按钮组件",
+                "option": {
+                    "url":"/buttonTest"
+                }
+            }
+        ]
+    },
+    {
+        "id": "02",
+        "icon": "el-icon-takeaway-box",
+        "label": "zsicon图标",
+        "option": {
+            "isframe": false,
+            "url": "/zsiconTest"
+        }
+    },
+    {
+        "id": "03",
+        "icon": "el-icon-guide",
+        "label": "功能组件",
+        "option": {},
+        "children":[
+            {
+                "id": "0301",
+                "icon": "el-icon-s-comment",
+                "label": "消息通知",
+                "option": {
+                    "url": "/notifyTest"
+                }
+            },
+            {
+                "id": "0302",
+                "icon": "el-icon-monitor",
+                "label": "dialog弹窗",
+                "option": {
+                    "url": ""
+                }
+            },
+            {
+                "id": "0303",
+                "icon": "el-icon-monitor",
+                "label": "tabs页签",
+                "option": {
+                    "url": "/tabsTest"
+                }
+            }
+        ]
+    },
+
+
+    {
+        "id": "9999",
+        "icon": "el-icon-thumb",
+        "label": "外链地址",
+        "option": {},
+        "children":[
+            {
+                "id": "9999-1",
+                "icon": "el-icon-film",
+                "label": "百度一下？",
+                "option": {
+                    "isframe": true,
+                    "url":"https://www.baidu.com"
+                }
+            },
+            {
+                "id": "9999-2",
+                "icon": "el-icon-film",
+                "label": "BI系统",
+                "option": {
+                    "isframe" : true,
+                    "url": "http://192.168.9.186:19013/#/"
+                }
+            },
+            {
+                "id": "9999-3-1",
+                "icon": "el-icon-film",
+                "label": "UI187系统",
+                "option": {
+                    "isframe":true,
+                    "url": "http://192.168.11.187"
+                }
+            },
+            {
+                "id": "9999-3",
+                "icon": "el-icon-film",
+                "label": "没啥用的二级标题3",
+                "option": {},
+                "children":[
+
+                    {
+                        "id": "9999-3-2",
+                        "icon": "el-icon-film",
+                        "label": "三级级标题哈哈",
+                        "option": {}
+                    }
+                ]
+            },
+            {
+                "id": "9999-4",
+                "icon": "el-icon-suitcase-1",
+                "label": "普通的文字标题",
+                "option": {}
+            }
+
+        ]
+    }
+]

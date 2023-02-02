@@ -1,0 +1,124 @@
+$block: el-pagination;
+.zs-pagenation {
+  height: 60px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+  .#{$block} {
+    flex: 1;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--font-color-regular);
+    // 按钮
+    .el-input__inner {
+      &:hover {
+        border: 1px solid var(--primary);
+      }
+
+    }
+
+    button {
+      min-width: auto;
+      &:disabled {
+        color: #ffffff;
+        background: var(--primary2);
+      }
+    }
+
+    // 总页数
+    .#{$block}__total {
+      margin-right: 10px;
+      color: var(--font-color-regular);
+    }
+
+    // 下拉分页
+    .#{$block}__sizes {
+      min-width: auto;
+      width: 108px;
+    }
+
+    .btn-prev, .btn-next {
+      width: 28px;
+      height: 28px;
+      border-radius: 2px;
+      border: 1px solid var(--border-color-light);
+      padding: 0;
+      margin-left: 8px;
+      &:hover:not(:disabled) {
+        color: var(--primary);
+        border: 1px solid var(--primary);
+      }
+    }
+
+    // 页签
+    .el-pager {
+      li {
+        font-size: 14px;
+        padding: 0;
+        min-width: 28px;
+        height: 28px;
+        line-height: 28px;
+        margin-left: 8px;
+        border-radius: 2px;
+        border: 1px solid var(--border-color-light);
+
+        &.active {
+          background-color: var(--primary);
+          color: #ffffff;
+          border-radius: 2px;
+        }
+
+        &:hover {
+          color: var(--primary);
+          background: #fff;
+          border: 1px solid var(--primary);
+        }
+      }
+
+      .more::before {
+        line-height: 28px;
+      }
+    }
+    // 跳到那一页
+    .#{$block}__jump {
+      .#{$block}__editor {
+        width: 56px;
+        margin: 0 8px;
+      }
+    }
+
+    // 小型分页
+    &.#{$block}--small {
+      // 下拉分页
+      .#{$block}__sizes {
+        .el-input--mini .el-input__inner {
+          height: 20px;
+          line-height: 20px;
+        }
+
+      }
+
+      .btn-prev, .btn-next {
+        width: 20px;
+        height: 20px;
+      }
+
+      .el-pager {
+        li {
+          min-width: 20px;
+          height: 20px;
+          line-height: 18px;
+        }
+
+        .more::before {
+          line-height: 20px;
+        }
+      }
+    }
+
+  }
+
+}

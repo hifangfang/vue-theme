@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- import Vue before Element -->
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入自己写的css 和 js  -->
+    <link rel="stylesheet" href="../../../theme-colors/dist/index.css">
+    <script src="../../../theme-colors/dist/index.js"></script>
+
+
+    <style>
+        #appifame {
+            background-color: var(--primary2);
+
+        }
+
+        .zdy {
+            color: var(--primary);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="appifame">
+
+        <div>
+            <div class="zs-title1">这是iframe嵌套的页面主题1</div>
+            <div class="zs-title2">这是二级标题</div>
+            <div class="zdy">自定义的主题色</div>
+            <el-button @click="sendToFather('drawer',{title:'子组件的标签',content:`<div class='zs-titile1'>你好我是身体</div><h5>我是\(^o^)/~哈哈哈</h5>`})">调用父组件的抽屉</el-button>
+            <el-button @click="sendToFather('notify',{content:'调用父组件的消息提醒'})"> 调用父组件的消息提醒</el-button>
+
+            <el-button @click="opentit">点击弹框</el-button>
+            <div>
+                <div class="zs-dilog">
+                    <el-dialog :visible.sync="isDialog">
+                        <!-- 身体 -->
+                        <div class="zs-dialog__content">
+                            这是弹框里面的内容
+                        </div>
+
+
+                        <!-- 尾部内容 -->
+                        <div slot="footer" class="dialog-footer">
+                            <el-button size="small" @click="cancle">取 消</el-button>
+                            <el-button size="small" type="primary" @click="submit">确定</el-button>
+                        </div>
+                    </el-dialog>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var vm = new Vue({
+        el: '#appifame',
+        data() {
+            return {
+                theme: null,
+                isDialog: false
+            }
+        },
+        created() {
+            this.theme = new ZSTheme()
+
+        },
+        methods: {
+            opentit() {
+                this.isDialog = true
+
+            },
+            cancle() {
+                console.log('您点击了取消');
+
+
+
+            },
+            submit() {
+
+            },
+            sendToFather(componentName,data) {
+                // 子传父
+                this.theme.postFather({
+                    componentName:componentName,
+                    title: data.title,
+                    content: data.content
+                })
+            },
+            send() {
+                let obj ='woziji'
+                window.parent.postMessage(obj, '*');
+            }
+
+        },
+
+    })
+</script>
+
+</html>

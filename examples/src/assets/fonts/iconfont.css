@@ -1,0 +1,398 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3721606 */
+  src: url('iconfont.eot?t=1667367850868'); /* IE9 */
+  src: url('iconfont.eot?t=1667367850868#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('iconfont.woff2?t=1667367850868') format('woff2'),
+       url('iconfont.woff?t=1667367850868') format('woff'),
+       url('iconfont.ttf?t=1667367850868') format('truetype'),
+       url('iconfont.svg?t=1667367850868#iconfont') format('svg');
+}
+
+[class|="zsicon"] {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.zsicon-table-status-circle:before {
+  content: "\e9a0";
+}
+
+.zsicon-indeterminate-circle-2-line:before {
+  content: "\e64a";
+}
+
+.zsicon-img-attachment-upload:before {
+  content: "\e649";
+}
+
+.zsicon-stackshare-line:before {
+  content: "\e648";
+}
+
+.zsicon-table-status:before {
+  content: "\e647";
+}
+
+.zsicon-anticlockwise-line:before {
+  content: "\e63e";
+}
+
+.zsicon-zoom-out-line:before {
+  content: "\e63f";
+}
+
+.zsicon-clockwise-line:before {
+  content: "\e640";
+}
+
+.zsicon-fullscreen-line:before {
+  content: "\e641";
+}
+
+.zsicon-proportion-full-line:before {
+  content: "\e642";
+}
+
+.zsicon-rotate-x-axis-line:before {
+  content: "\e643";
+}
+
+.zsicon-restart-line:before {
+  content: "\e644";
+}
+
+.zsicon-rotate-y-axis-line:before {
+  content: "\e645";
+}
+
+.zsicon-zoom-in-line:before {
+  content: "\e646";
+}
+
+.zsicon-attachment-doc:before {
+  content: "\e98d";
+}
+
+.zsicon-attachment-excel:before {
+  content: "\e98e";
+}
+
+.zsicon-attachment-cad:before {
+  content: "\e98f";
+}
+
+.zsicon-attachment-folder-zip:before {
+  content: "\e990";
+}
+
+.zsicon-attachment-img:before {
+  content: "\e991";
+}
+
+.zsicon-attachment-gif:before {
+  content: "\e992";
+}
+
+.zsicon-user1:before {
+  content: "\e993";
+}
+
+.zsicon-attachment-other:before {
+  content: "\e994";
+}
+
+.zsicon-attachment-bmp:before {
+  content: "\e995";
+}
+
+.zsicon-attachment-gif-2:before {
+  content: "\e996";
+}
+
+.zsicon-attachment-txt:before {
+  content: "\e997";
+}
+
+.zsicon-function-fill1:before {
+  content: "\e998";
+}
+
+.zsicon-attachment-ppt:before {
+  content: "\e999";
+}
+
+.zsicon-attachment-pdf:before {
+  content: "\e99a";
+}
+
+.zsicon-attachment-jpg:before {
+  content: "\e99b";
+}
+
+.zsicon-attachment-jpeg:before {
+  content: "\e99c";
+}
+
+.zsicon-attachment-ico:before {
+  content: "\e99d";
+}
+
+.zsicon-attachment-unknown:before {
+  content: "\e99e";
+}
+
+.zsicon-attachment-png:before {
+  content: "\e99f";
+}
+
+.zsicon-close-line:before {
+  content: "\e63b";
+}
+
+.zsicon-menu-fold-right-line:before {
+  content: "\e63c";
+}
+
+.zsicon-menu-fold-left-line:before {
+  content: "\e63d";
+}
+
+.zsicon-information-danger-fill:before {
+  content: "\e637";
+}
+
+.zsicon-information-help-fill:before {
+  content: "\e638";
+}
+
+.zsicon-information-regular-fill:before {
+  content: "\e639";
+}
+
+.zsicon-information-success-fill:before {
+  content: "\e63a";
+}
+
+.zsicon-eye-line1:before {
+  content: "\e631";
+}
+
+.zsicon-lock-2-line1:before {
+  content: "\e632";
+}
+
+.zsicon-login-password:before {
+  content: "\e633";
+}
+
+.zsicon-eye-close-line1:before {
+  content: "\e634";
+}
+
+.zsicon-user-3-line1:before {
+  content: "\e635";
+}
+
+.zsicon-login-qr-scan:before {
+  content: "\e636";
+}
+
+.zsicon-delete-bin-line:before {
+  content: "\e630";
+}
+
+.zsicon-file-copy-line:before {
+  content: "\e62a";
+}
+
+.zsicon-add-line:before {
+  content: "\e62b";
+}
+
+.zsicon-qr-scan-2-line:before {
+  content: "\e62c";
+}
+
+.zsicon-download-line:before {
+  content: "\e62d";
+}
+
+.zsicon-edit-2-line:before {
+  content: "\e62e";
+}
+
+.zsicon-attachment-2:before {
+  content: "\e62f";
+}
+
+.zsicon-menu-fold-line:before {
+  content: "\e628";
+}
+
+.zsicon-menu-unfold-line:before {
+  content: "\e629";
+}
+
+.zsicon-archive-drawer-2-fill:before {
+  content: "\e627";
+}
+
+.zsicon-pages-fill:before {
+  content: "\e626";
+}
+
+.zsicon-file-info-fill:before {
+  content: "\e61c";
+}
+
+.zsicon-file-paper-fill:before {
+  content: "\e61d";
+}
+
+.zsicon-archive-drawer-fill:before {
+  content: "\e61e";
+}
+
+.zsicon-inbox-archive-1-fill:before {
+  content: "\e61f";
+}
+
+.zsicon-files-fill:before {
+  content: "\e620";
+}
+
+.zsicon-more-fill:before {
+  content: "\e621";
+}
+
+.zsicon-mini-program-fill:before {
+  content: "\e622";
+}
+
+.zsicon-survey-fill:before {
+  content: "\e623";
+}
+
+.zsicon-inbox-fill:before {
+  content: "\e624";
+}
+
+.zsicon-inbox-archive-fill:before {
+  content: "\e625";
+}
+
+.zsicon-draft-line:before {
+  content: "\e611";
+}
+
+.zsicon-file-edit-line-1:before {
+  content: "\e612";
+}
+
+.zsicon-arrow-left-right-line:before {
+  content: "\e613";
+}
+
+.zsicon-login-circle-line:before {
+  content: "\e614";
+}
+
+.zsicon-folder-line:before {
+  content: "\e615";
+}
+
+.zsicon-group-line:before {
+  content: "\e616";
+}
+
+.zsicon-repeat-message-line:before {
+  content: "\e617";
+}
+
+.zsicon-indeterminate-circle-line:before {
+  content: "\e618";
+}
+
+.zsicon-reply-line:before {
+  content: "\e619";
+}
+
+.zsicon-save-line:before {
+  content: "\e61a";
+}
+
+.zsicon-timer-flash-line:before {
+  content: "\e61b";
+}
+
+.zsicon-auction-line:before {
+  content: "\e60a";
+}
+
+.zsicon-bill-2-line:before {
+  content: "\e60b";
+}
+
+.zsicon-delete-back-2-line:before {
+  content: "\e60c";
+}
+
+.zsicon-bill-line:before {
+  content: "\e60d";
+}
+
+.zsicon-user-voice-line:before {
+  content: "\e60e";
+}
+
+.zsicon-file-edit-line:before {
+  content: "\e60f";
+}
+
+.zsicon-file-edit-line-2:before {
+  content: "\e610";
+}
+
+.zsicon-function-fill:before {
+  content: "\e608";
+}
+
+.zsicon-user:before {
+  content: "\e609";
+}
+
+.zsicon-palette-line:before {
+  content: "\e604";
+}
+
+.zsicon-notification-3-line:before {
+  content: "\e605";
+}
+
+.zsicon-settings-5-line:before {
+  content: "\e606";
+}
+
+.zsicon-arrow:before {
+  content: "\e607";
+}
+
+.zsicon-eye-line:before {
+  content: "\e600";
+}
+
+.zsicon-lock-2-line:before {
+  content: "\e601";
+}
+
+.zsicon-user-3-line:before {
+  content: "\e602";
+}
+
+.zsicon-eye-close-line:before {
+  content: "\e603";
+}
+

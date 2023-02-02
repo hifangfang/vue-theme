@@ -1,0 +1,53 @@
+$message: el-message;
+$customClass: zs-message;
+@mixin MessageColor($type,$color,$colorHover) {
+    &.#{$message}--#{$type} {
+        background-color: #ffffff;
+        border-color: $colorHover;
+        .#{$message}__icon {
+            color: $color;
+        }
+        .#{$message}__content {
+            color: #000000;
+        }
+
+        box-shadow: 0px 8px 16px var(--primary2);
+
+    }
+}
+.#{$customClass}.#{$message} {
+    max-width: 492px;
+    padding: 12px 16px;
+    background-color: #fff;
+    border-color:var(--primary-hover) ;
+    z-index: 3000!important;
+    //box-shadow: 0px 8px 6px var(--primary-plain);
+    // 图标
+    .#{$message}__icon {
+        font-size: 20px;
+    }
+    // 身体
+    .#{$message}__content {
+        line-height: 19px;
+        color: #000000;
+
+    }
+    // 关闭按钮
+    .#{$message}__closeBtn{}
+    // 状态
+    @include MessageColor(success,var(--success),var(--success-border));
+    @include MessageColor(warning,var(--warning),var(--warning-border));
+    @include MessageColor(info, var(--primary),var(--primary-border));
+    @include MessageColor(error, var(--danger),var(--danger-border))
+}
+
+
+/**
+不同状态 message
+编译后形如
+.zs-message.el-message
+.zs-message.el-message.el-message--success
+.zs-message.el-message.el-message--warning
+.zs-message.el-message.el-message--info
+.zs-message.el-message.el-message--error
+ */

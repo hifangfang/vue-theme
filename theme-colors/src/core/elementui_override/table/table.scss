@@ -1,0 +1,102 @@
+.zs-table.el-table {
+  color: var(--font-color-regular);
+  border-radius: 2px;
+  border: 1px solid var(--border-color-lighter);
+  overflow: auto;
+  //鼠标移入显示滚动条
+  ::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+  }
+
+  &:hover {
+    ::-webkit-scrollbar {
+      width: 6px !important;
+      height: 6px !important;
+    }
+  }
+  //鼠标悬浮 固定列与 竖向滚动条距离
+  .el-table--scrollable-y {
+    .el-table__fixed-right {
+      height: 100% !important;
+      right: 0 !important;
+    }
+
+    &:hover {
+      .el-table__fixed-right {
+        right: 5px !important;
+      }
+    }
+  }
+
+  .el-table--scrollable-x {
+    &:hover {
+      .el-table__fixed-right {
+        height: calc(100% - 6px) !important;
+      }
+    }
+  }
+  &::before {
+    height: 0;
+  }
+  // 表格
+  caption {
+    font-size: var(--font-size-primary);
+  }
+
+  // 表头
+  th {
+    font-size: var(--font-size-primary);
+    font-weight: 550;
+    color: var(--font-color-primary);
+    background-color: #F7F9FC;
+  }
+  // 表格
+  td {
+    font-size: var(--font-size-primary);
+  }
+
+  // 表格行
+  .el-table__header {
+    tr th:first-child {
+      .cell {
+        margin: 0 auto;
+      }
+
+      .el-checkbox {
+        text-align: center;
+      }
+    }
+  }
+  // 表格行
+  .el-table__row {
+    // 鼠标经过
+    &:hover,
+    &.hover-row {
+      td.el-table__cell {
+        border-right: 0px;
+        border-bottom: 1px solid transparent;
+        background-color: var(--primary1);
+      }
+    }
+  }
+  // 表格行斑马
+  .el-table__row--striped {
+    td.el-table__cell {
+      background-color: #F7F9FC;
+    }
+  }
+
+  // 表格列
+  .el-table__cell:not(.el-table__expanded-cell) {
+    height: 40px;
+    padding: 0 !important;
+    border-right: 1px solid var(--border-color-lighter);
+    border-bottom: 1px solid var(--border-color-lighter);
+    box-sizing: border-box;
+  }
+}

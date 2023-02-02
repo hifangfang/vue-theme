@@ -1,0 +1,41 @@
+
+.el-message-box.zs-confirm {
+  width: 350px;
+  .el-message-box__header {
+    .el-message-box__headerbtn {
+      width: 24px;
+      height: 24px;
+      border-radius: var(--radius-normal);
+      top: 15px;
+      right: 15px;
+      &:hover {
+        background: var(--primary1);
+        color: var(--primary);
+      }
+    }
+  }
+  .el-message-box__btns {
+    .el-button {
+      color: var(--font-color-regular);
+      font-size: var(--button-font-size);
+      line-height: var(--button-font-size);
+      padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+      border-radius: var(--button-border-radius);
+      &:hover, &:focus {
+        color: var(--primary);
+        background-color: var(--primary1);
+        border-color: var(--primary2);
+      }
+      &.el-button--primary {
+        color: #ffffff;
+        background-color: var(--primary);
+        border-color: var(--primary);
+        &:hover, &:focus {
+          color: #ffffff;
+          background-color: var(--primary-hover);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}

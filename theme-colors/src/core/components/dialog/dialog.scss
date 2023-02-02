@@ -1,0 +1,15 @@
+// 提示框
+.zs-dialog-box {
+    .zs-dialog__content {
+        padding: 8px;
+        margin: 8px;
+        min-height: 160px;
+        max-height: 60vmin;
+        overflow: auto;
+        color: var(--font-color-regular);
+        background-color: var(--background-color1);
+        border-radius: var(--radius-normal);
+
+    }
+
+}

@@ -1,0 +1,102 @@
+$button: el-button;
+$customClass: zs-btn;
+@mixin MixinsButton($type, $color, $plain, $hover, $border) {
+    &.#{$button}--#{$type} {
+        color: #ffffff;
+        background-color: $color;
+        border-color: $color;
+        &.is-plain {
+            color: $color;
+            background-color: $plain;
+            border-color: $border;
+            &:hover {
+                background-color: $color;
+            }
+        }
+        &:hover, &:focus {
+            color: #ffffff;
+            background-color: $hover;
+            border-color: transparent;
+        }
+    }
+}
+
+.#{$customClass}.#{$button} {
+    color: var(--font-color-regular);
+    font-size: var(--button-font-size);
+    line-height: var(--button-font-size);
+    padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+    border-radius: var(--button-border-radius);
+    //margin-left: var(--button-margin-left);
+    &:hover, &:focus {
+        color: var(--primary);
+        background-color: var(--primary1);
+        border-color: var(--primary2);
+    }
+    &.is-plain {
+        &:hover {
+            color: var(--primary);
+        }
+
+    }
+    i {
+        font-size: var(--button-font-size);
+        line-height: var(--button-font-size);
+        margin-right: 4px;
+    }
+    &+.#{$customClass}:not(:first-child) {
+        margin-left: var(--button-margin-left);
+    }
+    @include MixinsButton(primary, var(--primary), var(--primary-plain), var(--primary-hover), var(--primary-border));
+    @include MixinsButton(success, var(--success), var(--success-plain), var(--success-hover), var(--success-border));
+    @include MixinsButton(danger, var(--danger), var(--danger-plain), var(--danger-hover), var(--danger-border));
+    @include MixinsButton(warning, var(--warning), var(--warning-plain), var(--warning-hover), var(--warning-border));
+    @include MixinsButton(info, var(--info), var(--info-plain), var(--info-hover), var(--info-border));
+}
+// mini尺寸
+.#{$customClass}.#{$button}--mini {
+    font-size: var(--button-font-size-mini);
+    line-height: var(--button-font-size-mini);
+    padding: var(--button-padding-vertical-mini) var(--button-padding-horizontal);
+    &:hover, &:focus {
+        color: var(--primary);
+        background-color: var(--primary1);
+        border-color: var(--primary2);
+    }
+    &.is-plain {
+        &:hover {
+            color: var(--primary);
+        }
+
+    }
+    i {
+        font-size: var(--font-size-small);
+        line-height: var(--font-size-small);
+        margin-right: 4px;
+    }
+    &+.#{$customClass}:not(:first-child) {
+        margin-left: 8px;
+    }
+    @include MixinsButton(primary, var(--primary), var(--primary-plain), var(--primary-hover), var(--primary-border));
+    @include MixinsButton(success, var(--success), var(--success-plain), var(--success-hover), var(--success-border));
+    @include MixinsButton(danger, var(--danger), var(--danger-plain), var(--danger-hover), var(--danger-border));
+    @include MixinsButton(warning, var(--warning), var(--warning-plain), var(--warning-hover), var(--warning-border));
+    @include MixinsButton(info, var(--info), var(--info-plain), var(--info-hover), var(--info-border));
+}
+
+/**
+不同 type 按钮的样式覆盖
+编译后形如
+.zs-btn.el-button:hover
+.zs-btn.el-button.is-plain:hover
+
+.zs-btn.el-button.el-button--primary
+.zs-btn.el-button.el-button--primary.is-plain
+.zs-btn.el-button.el-button--primary.is-plain:hover
+
+.zs-btn.el-button.el-button--success
+.zs-btn.el-button.el-button--success:hover
+.zs-btn.el-button.el-button--success.is-plain
+.zs-btn.el-button.el-button--success.is-plain:hover
+...
+ */

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    li {
+        list-style: none;
+        overflow: hidden;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    .tab {
+        position: relative;
+        border: solid 1px #B0B0B0;
+        /*margin-top: 20px;*/
+    }
+
+    .tab span {
+        float: right;
+        color: #333;
+        padding: 0px 10px;
+        line-height: 32px;
+        font-size: 14px;
+        border-left: solid 1px #B0B0B0;
+    }
+
+    .tablist {
+        height: 32px;
+        overflow: hidden;
+    }
+
+    .tablist li {
+        float: left;
+        padding: 6px 10px;
+        color: #333;
+        cursor: pointer;
+        border-right: solid 1px #B0B0B0;
+    }
+
+    .more {
+        cursor: pointer;
+    }
+
+    .more-tablist {
+        position: absolute;
+        right: 0px;
+        top: 32px;
+        height: 32px;
+        /*border-left: solid 1px #B0B0B0;
+        border-right:solid 1px #b0b0b0;*/
+        display: none;
+        padding-bottom: 4px;
+        /*max-height: 200px;//最高高度*/
+        display: none;
+        overflow-y: auto;
+        /* 垂直滚动条 */
+    }
+
+    .more-tablist li {
+        padding: 6px 10px;
+        border: solid 1px #B0B0B0;
+        margin-top: -1px;
+    }
+
+    .more:hover .more-tablist {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="tab">
+
+        <div class="more" id='more'>
+            <span>更多》</span>
+            <ul class="more-tablist" id="moreList"></ul>
+        </div>
+        <ul class="tablist" id="tabList">
+        </ul>
+
+    </div>
+    <div style="height:500px; background-color:aqua;" ></div>
+</body>
+<script>
+    var tablist = ['tabItem01', 'tabItem02tabItem02', 'tabItem03', 'tabItem04',
+        'tabItem05', 'tabItem06', 'tabItem07', 'tabItem08',
+        'tabItem04', 'tabItem05', 'tabItem06', 'tabItem07', 'tabItem08'];
+
+    var ul = document.getElementById('tabList');
+    var moreUl = document.getElementById('moreList');
+    window.onload = function () {
+        moreTab(tablist, ul, moreUl);
+    }
+    window.onresize = function () {
+        moreTab(tablist, ul, moreUl);
+
+    }
+
+    function moreTab(tablist, ul, moreUl) {
+        var liWidth = 0;
+        var num;
+        var moreli = "";
+        var li = "";
+        ul.innerHTML = "";
+        for (var i = 0; i < tablist.length; i++) {
+            li += "<li>" + tablist[i] + "</li>";
+        }
+        ul.innerHTML = li;
+        for (var i = 0; i < ul.childNodes.length; i++) {
+            //          	console.log(ul.offsetWidth)
+            liWidth += ul.childNodes[i].offsetWidth;
+            if (liWidth > ul.offsetWidth - 63) {
+                num = i;
+                document.getElementById('more').style.display = 'block';
+                break;
+            } else {
+                document.getElementById('more').style.display = 'none';
+            }
+        }
+        var maxHeight = 200;
+        var morelist = tablist.slice(num, tablist.length);
+        //          moreUl.innerHTML = "";
+        for (var i = 0; i < morelist.length; i++) {
+            moreli += "<li>" + morelist[i] + "</li>";
+        }
+        moreUl.innerHTML = moreli;
+        var mHeight = moreli.offsetHeight;
+        //          console.log(num);
+        if (num > tablist.length - 1) {
+            moreUl.innerHTML = "";
+        }
+
+        var mHeight = document.documentElement.offsetHeight - 74;
+        maxHeight = Math.max(maxHeight, mHeight);
+        console.log(maxHeight);
+        moreUl.style.height = maxHeight + 'px';
+
+    }
+
+</script>
+
+</html>

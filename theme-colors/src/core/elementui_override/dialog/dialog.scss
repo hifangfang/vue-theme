@@ -1,0 +1,71 @@
+$block:el-dialog;
+
+@mixin Dialog() {
+    margin: 0!important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--radius-big);
+    .#{$block}__header {
+        min-height: 48px;
+        line-height: 48px;
+        padding: 0 16px;
+        border-bottom: 1px solid var(--border-color-base);
+        box-sizing: border-box;
+
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        .#{$block}__title {
+            // background-color: pink;
+            font-weight: 500;
+            font-size: var(--font-size-medium);
+            color: var(--font-color-primary);
+        }
+
+        .#{$block}__headerbtn {
+            width: 24px;
+            height: 24px;
+            border-radius: var(--radius-normal);
+            top: 12px;
+            right: 15px;
+            color: var(--font-color-secondary);
+            &:hover {
+                background: var(--primary1);
+                .el-dialog__close {
+                    color: var(--primary);
+                }
+            }
+            &:focus {
+                .el-dialog__close {
+                    color: var(--primary);
+                }
+            }
+            .el-dialog__close {
+                line-height: 24px;
+                position: absolute;
+                top: 0;
+                left: 4px;
+            }
+        }
+    }
+
+    .#{$block}__body {
+        padding: 16px;
+    }
+
+    .#{$block}__footer {
+        min-height: 48px;
+        padding: 8px 16px;
+        border-top: 1px solid var(--border-color-base);
+    }
+
+
+}
+
+.zs-dialog {
+    .#{$block} {
+        @include Dialog()
+    }
+}

@@ -1,0 +1,49 @@
+.zs-Breadcrumb {
+    box-sizing: border-box;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--background-color1);
+
+}
+
+.zs-bread-crumb {
+    display: flex;
+
+    .zs-bread-crumb-item {
+        color: var(--info);
+        font-size: var(--font-size-primary);
+        padding-right: 4px;
+        font-size: var(--font-size-primary);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--primary);
+        }
+
+        &::after {
+            content: "\e6e0";
+            font-family: element-icons !important;
+            text-align: center;
+            margin-left: 10px;
+            // color: var(--primary9);
+            font-style: normal;
+            font-weight: 600;
+            font-variant: normal;
+            text-transform: none;
+            line-height: var(--font-size-primary);
+            display: inline-block;
+        }
+    }
+
+    .zs-bread-crumb-item:last-child {
+        color: var(--font-color-primary);
+
+        // font-weight: 550;
+        &:hover {
+            color: var(--primary);
+        }
+
+        &::after {
+            content: "";
+        }
+    }
+}
