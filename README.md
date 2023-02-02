@@ -1,4 +1,4 @@
-# gisquest-theme 插件
+# vue-theme 插件
 
 > 本插件主要提供大部分样式中会使用到的样式变量来统一平台样式，依赖 css-vars-ponyfill 实时编译 css 的 var 变量来实现主题切换
 
@@ -155,13 +155,13 @@ const baseVariables = {
 > 在私服环境下: [ http://192.168.11.146:8073/repository/npm-all/ ]
 + 安装
 ```bash
-npm install gisquest-theme
+npm install vue-theme
 ```
 + 引入使用（可参照 examples/components/ThemeChange.vue ）
 ```javascript
 
-    import ZsTheme from "gisquest-theme"  // 引入该插件
-    import 'gisquest-theme/dist/index.css' // 引入插件主 css 样式文件（含iconfont文件）
+    import ZsTheme from "vue-theme"  // 引入该插件
+    import 'vue-theme/dist/index.css' // 引入插件主 css 样式文件（含iconfont文件）
 
     let myTheme = new ZsTheme() // 实例化之后即可
     console.log(myTheme.variables) // 当前主题所有变量
@@ -170,7 +170,7 @@ npm install gisquest-theme
 ## 开始使用
 + 直接使用公共样式(详情运行examples查看)
 ```js
-import "gisquest-theme/dist/common.css"; // 引入公共样式文件
+import "vue-theme/dist/common.css"; // 引入公共样式文件
 <!-- 左右布局 -->
   <div class="zs-home">
     <div class="zs-wrapper">
@@ -180,7 +180,7 @@ import "gisquest-theme/dist/common.css"; // 引入公共样式文件
 + 直接使用公共element覆盖样式
 ```js
 
-import "gisquest-theme/dist/elementui_override.css"; // 引入覆盖样式文件， zs-dialog/zs-btn/zs-message/zs-popup/zs-dropdown...
+import "vue-theme/dist/elementui_override.css"; // 引入覆盖样式文件， zs-dialog/zs-btn/zs-message/zs-popup/zs-dropdown...
 
 <el-dialog class="zs-dialog"></el-dialog>  // 在 class 中加入zs-dialog公共样式
 ```
@@ -241,11 +241,11 @@ myTheme.setOption(editVariable)
     // 当主题嵌套其他网页的时候 可以适配嵌套网页的主题样式
       window.frames['myframe'].postMessage(
           {
-            name: "gisquest-theme", 
+            name: "vue-theme", 
             type:"send"
             variables:variables // 当前主题的全局变量
           },'*')
-    // 注！嵌套的iframe 自身有gisquest-theme 的方法
+    // 注！嵌套的iframe 自身有vue-theme 的方法
    </script>
    <!-- 详情用法见examples/src/test/iframe-demo1.html -->
   
@@ -270,7 +270,7 @@ npm run build
 # 在 theme-colors下
 npm link
 # 在你的项目目录下 
-npm link gisquest-theme
+npm link vue-theme
 # 运行你的项目，每次 theme-colors 中有改动都需重新 npm run build，
 # 也可自行更改 theme-colors 下 package.json 实现无需重新打包即可联调
 ```
